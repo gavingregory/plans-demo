@@ -1,0 +1,304 @@
+#root {
+  width: 100%;
+}
+
+.page-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.page-shell--narrow {
+  width: min(760px, calc(100% - 32px));
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.page-header h1,
+.empty-state h1 {
+  margin: 4px 0 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #5d6b7b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.button,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid #0f172a;
+  border-radius: 8px;
+  padding: 0 18px;
+  color: #ffffff;
+  background: #0f172a;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.button--secondary {
+  color: #0f172a;
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.button--secondary:hover {
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.button--danger {
+  background: #b42318;
+  border-color: #b42318;
+}
+
+.button--danger:hover {
+  background: #912018;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
+  gap: 18px;
+}
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+  padding: 22px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgb(15 23 42 / 8%);
+}
+
+.plan-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.plan-card h2 {
+  margin: 4px 0 0;
+  color: #0f172a;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.plan-card__actions {
+  display: flex;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.plan-card__actions a {
+  color: #175cd3;
+  font-weight: 700;
+}
+
+.plan-card__actions a:hover {
+  color: #0b3b8f;
+}
+
+.plan-card__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 0;
+}
+
+.plan-card__details div {
+  min-width: 0;
+}
+
+.plan-card__details dt {
+  color: #64748b;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.plan-card__details dd {
+  margin: 3px 0 0;
+  color: #111827;
+  font-weight: 700;
+}
+
+.plan-form,
+.confirm-panel,
+.empty-state {
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+  padding: 24px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgb(15 23 42 / 8%);
+}
+
+.plan-form {
+  display: grid;
+  gap: 18px;
+}
+
+.plan-form label {
+  display: grid;
+  gap: 8px;
+  color: #344054;
+  font-weight: 700;
+  text-align: left;
+}
+
+.plan-form select,
+.plan-form input {
+  width: 100%;
+  min-height: 46px;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #0f172a;
+  background: #ffffff;
+  font: inherit;
+}
+
+.field-error {
+  color: #b42318;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.readonly-field {
+  display: grid;
+  gap: 8px;
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+  padding: 12px;
+  background: #f8fafc;
+  text-align: left;
+}
+
+.readonly-field span {
+  color: #344054;
+  font-weight: 700;
+}
+
+.readonly-field strong {
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.confirm-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.confirm-panel > p {
+  margin: 0;
+  color: #344054;
+  font-size: 1.05rem;
+}
+
+.empty-state {
+  display: grid;
+  justify-items: start;
+  gap: 18px;
+}
+
+.plan-summary {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.plan-summary div {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 14px;
+}
+
+.plan-summary div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.plan-summary dt {
+  color: #64748b;
+  font-weight: 700;
+}
+
+.plan-summary dd {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.confirmation-banner {
+  margin-bottom: 18px;
+  border-radius: 8px;
+  padding: 14px 18px;
+  color: #054f31;
+  background: #d1fadf;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 24px 0;
+  }
+
+  .page-header,
+  .plan-card__header,
+  .form-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .button,
+  button {
+    width: 100%;
+  }
+
+  .plan-card__details {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-summary div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
